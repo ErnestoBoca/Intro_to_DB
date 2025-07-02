@@ -16,7 +16,7 @@ CREATE TABLE Books (
 );
 
 CREATE TABLE Customers (
-    custumer_id INT PRIMARY KEY,
+    customer_id INT PRIMARY KEY,
     customer_name VARCHAR(215),
     email VARCHAR(215),
     address TEXT
@@ -24,9 +24,9 @@ CREATE TABLE Customers (
 
 CREATE TABLE Orders (
     order_id INT PRIMARY KEY,
-    custumer_id INT,
+    customer_id INT,
     order_date DATE,
-    FOREIGN KEY(custumer_id) REFERENCES Customers(custumer_id)
+    FOREIGN KEY(customer_id) REFERENCES Customers(customer_id)
 );
 
 CREATE TABLE Order_Details (
